@@ -1,4 +1,6 @@
 fn main() {
+    // let s = no_dangle();
+    let mut s = "hello";
     let s1 = String::from("hello");
 
     {
@@ -21,16 +23,16 @@ fn main() {
 
     println!("The length of '{}' is {}.", s1, len);
 
-    change(&mut s);
+    // change(&mut s);
 
-    let reference_to_nothing = dangle();
+    // let reference_to_nothing = dangle();
 }
 
-fn dangle() -> &String {
-    let s = String::from("hello");
-
-    &s
-}
+// fn dangle() -> &String {
+//     let s = String::from("hello");
+//
+//     &s
+// }
 
 fn no_dangle() -> String {
     let s = String::from("hello");
